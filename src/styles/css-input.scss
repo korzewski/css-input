@@ -122,4 +122,28 @@ $color-1: #faa200;
       -webkit-animation-duration: 0.3s;
     }
   }
+
+  &.anim-3 {
+    @-webkit-keyframes anim-3 {
+      0%   { transform: translate(0, 0) }
+      50%  { transform: translate(-50%, 0) }
+      100% { transform: translate(0, 0) }
+    }
+
+    @-webkit-keyframes anim-3b {
+      0%   { transform: translate(0, 0) }
+      50%  { transform: translate(5px, 0) }
+      100% { transform: translate(0, 0) }
+    }
+
+    input[type='checkbox']:checked, input[type='radio']:checked {
+      -webkit-animation: anim-3;
+      -webkit-animation-duration: 0.3s;
+
+      + label{
+        -webkit-animation: anim-3b;
+        -webkit-animation-duration: 0.3s;
+      }
+    }
+  }
 }
