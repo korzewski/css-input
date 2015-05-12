@@ -1,5 +1,6 @@
 $size: 16px;
 $size-checkbox: $size;
+$size-radio: $size;
 
 $border-width: 2px;
 
@@ -13,7 +14,7 @@ $color-1: #faa200;
   }
 
   // ---------- DEFAULT -----------------------------------------------------------------
-  input[type='checkbox']{
+  input[type='checkbox'], input[type='radio']{
     width: $size-checkbox;
     height: $size-checkbox;
     visibility: hidden;
@@ -28,13 +29,17 @@ $color-1: #faa200;
       height: $size-checkbox;
 
       border: $border-width solid $color-default;
-
     }
 
     &:checked:before{
       background-color: $color-default;
     }
+  }
 
+  input[type='radio']{
+    &:before{
+      border-radius: 50%;
+    }
   }
 
   // ---------- .same-line -----------------------------------------------------------------
@@ -53,10 +58,6 @@ $color-1: #faa200;
   // ---------- .type-1 -----------------------------------------------------------------
   &.type-1 {
     input[type='checkbox'] {
-      &:before {
-        background: transparent
-      }
-
       &:checked:after {
         visibility: visible;
         content: '';
@@ -69,37 +70,34 @@ $color-1: #faa200;
         margin-left: $border-width / 2;
         width: $size-checkbox / 3;
         height: $size-checkbox / 1.7;
-        border: $border-width solid $color-default;
+        border: $border-width solid #fff;
         border-top: none;
         border-left: none;
         transform: translate(-60%, -60%) rotate(30deg);
       }
     }
+
+    input[type='radio'] {
+      &:checked:after {
+        visibility: visible;
+        content: '';
+        position: absolute;
+        left: $border-width;
+        top: $border-width;
+        width: $size - $border-width*2;
+        height: $size - $border-width*2;
+        border-radius: 50%;
+        border: $border-width solid #fff;
+      }
+    }
+
   }
 
   // ---------- .color-1 -----------------------------------------------------------------
   &.color-1{
-    input[type='checkbox']{
+    input[type='checkbox'], input[type='radio']{
       &:before{ border-color: $color-1 }
       &:checked:before{ background-color: $color-1 }
     }
-
-    &.type-1{
-      input[type='checkbox']{
-        &:after{ border-color: #fff }
-      }
-    }
   }
-
-  //&.color-1{
-  //  input[type='checkbox'] {
-  //    &:before {
-  //      background: transparent
-  //    }
-  //
-  //    &:checked:after {
-  //
-  //    }
-  //  }
-  //}
 }
