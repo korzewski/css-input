@@ -1,0 +1,33 @@
+$size: 14px;
+$size-checkbox: $size;
+
+.css-input{
+
+    // ---------- DEFAULT -----------------------------------------------------------------
+    input[type='checkbox']{
+      visibility: hidden;
+
+      &:before{
+        visibility: visible;
+        content: '';
+        display: inline-block;
+        width: $size-checkbox;
+        height: $size-checkbox;
+
+        border: 2px solid #333;
+      }
+
+      &:checked:before{
+        background-color: #333;
+      }
+    }
+
+    // ---------- .new-line -----------------------------------------------------------------
+    &.new-line{
+      label:after{
+        content: '';
+        display: block;
+      }
+    }
+
+}

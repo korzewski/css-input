@@ -1,0 +1,19 @@
+// Main styles file, please include here all other scss or sass files
+@import "compass";
+@import "foundation-includes";
+
+body{
+
+}
+
+.main-wrap{
+  width: 50%;
+  margin: auto;
+
+  form{
+    padding: 25px 0;
+    border-bottom: 1px dashed #333;
+  }
+}
+
+@import "css-input";
