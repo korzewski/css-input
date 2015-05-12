@@ -1,7 +1,4 @@
 $size: 16px;
-$size-checkbox: $size;
-$size-radio: $size;
-
 $border-width: 2px;
 
 $color-default: #333;
@@ -10,13 +7,13 @@ $color-1: #faa200;
 .css-input{
 
   label{
-    font-size: $size-checkbox;
+    font-size: $size;
   }
 
   // ---------- DEFAULT -----------------------------------------------------------------
   input[type='checkbox'], input[type='radio']{
-    width: $size-checkbox;
-    height: $size-checkbox;
+    width: $size;
+    height: $size;
     visibility: hidden;
     position: relative;
     top: $border-width;
@@ -25,8 +22,8 @@ $color-1: #faa200;
       visibility: visible;
       content: '';
       display: inline-block;
-      width: $size-checkbox;
-      height: $size-checkbox;
+      width: $size;
+      height: $size;
 
       border: $border-width solid $color-default;
     }
@@ -65,11 +62,10 @@ $color-1: #faa200;
         left: 50%;
         top: 50%;
 
-        $border-width: $size-checkbox / 7;
-
+        $border-width: $size / 7;
         margin-left: $border-width / 2;
-        width: $size-checkbox / 3;
-        height: $size-checkbox / 1.7;
+        width: $size / 3;
+        height: $size / 1.7;
         border: $border-width solid #fff;
         border-top: none;
         border-left: none;
