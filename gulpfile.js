@@ -1,4 +1,4 @@
-var outputPath = '../dist/';
+var outputPath = './dist/';
 
 var scriptsToLoad = [
     'src/scripts/main.js'
