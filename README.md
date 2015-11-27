@@ -1,7 +1,7 @@
 # css-input
-##### If you like custom css inputs (checkboxes & radio buttons) check out the ```index.html``` file to understand the simplicity of usage. All you need to do is only extra class added to your <form> tag. Choose pattern you like and have fun!
+##### If you like custom css inputs (checkboxes & radio buttons) check out the ```index.html``` file to understand the simplicity of usage. All you need to do is only extra class added to your ```<form>``` tag. Choose pattern you like and have fun!
 
-### Patterns (it's a class name for <form> tag)
+### Patterns (it's a class name for ```<form>``` tag)
 * ```css-input```
 * ```css-input``` with ```same-line```
 * ```css-input``` with ```type-1```
